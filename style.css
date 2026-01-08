@@ -254,6 +254,7 @@
 
       const isAvailable = Math.random() > 0.5;
 
+      <!-- This section is the header -->
       if (isAvailable) {
         messageDiv.innerHTML = `<div class="success-message">${apartmentType} is available from ${checkIn} to ${checkOut}!</div>`;
       } else {
