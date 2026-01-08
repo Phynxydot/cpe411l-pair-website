@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Urban Nest Apartments</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo img {
+      height: 40px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #007BFF;
+    }
+
+    .availability-form label,
+    .contact-form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .availability-form input,
+    .availability-form select,
+    .contact-form input,
+    .contact-form textarea,
+    .availability-form button,
+    .contact-form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .availability-form button,
+    .contact-form button {
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    .availability-form button:hover,
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .success-message,
+    .error-message {
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .success-message {
+      background-color: #28a745;
+    }
+
+    .error-message {
+      background-color: #dc3545;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .social-links a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Urban Nest Apartment Logo" />
+    </div>
+    <nav>
+      <a href="#availability">Availability</a>
+      <a href="#sunlit">Sunlit Studio</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Availability Checker -->
+  <section id="availability" class="availability-form">
+    <h1>Check Apartment Availability</h1>
+    <form id="availabilityForm">
+      <label for="apartment-type">Select Apartment Type:</label>
+      <select id="apartment-type" required>
+        <option value="">-- Choose Apartment --</option>
+        <option value="studio">Studio</option>
+        <option value="1-bedroom">1 Bedroom</option>
+        <option value="2-bedroom">2 Bedroom</option>
+        <option value="penthouse">Penthouse</option>
+      </select>
+
+      <label for="check-in">Check-in Date:</label>
+      <input type="date" id="check-in" required />
+
+      <label for="check-out">Check-out Date:</label>
+      <input type="date" id="check-out" required />
+
+      <button type="submit">Check Availability</button>
+    </form>
+    <div id="message"></div>
+  </section>
+
+  <!-- Sunlit Studio Page -->
+  <section id="sunlit">
+    <h1>Sunlit Studio</h1>
+    <p>This Sunlit Studio offers a serene ambiance with ample natural light, modern furniture, and a cozy atmosphere perfect for relaxation or work.</p>
+    <ul>
+      <li>Size: 60 sqm</li>
+      <li>Wi-Fi: High-speed internet</li>
+      <li>Price: $150/night</li>
+      <li>Access to rooftop lounge</li>
+      <li>Free on-site parking</li>
+    </ul>
+
+    <h2>Room Features</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/live.jpg" alt="Living Area" />
+        <p>Cozy and well-lit living space.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/bedroom.jpg" alt="Bedroom" />
+        <p>Comfortable queen-sized bed.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/kitchen.jpg" alt="Kitchen" />
+        <p>Modern kitchen with all amenities.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/bathroom.jpg" alt="Bathroom" />
+        <p>Stylish and clean bathroom.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Page -->
+  <section id="contact" class="contact-form">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Fill out the form below or reach out via the contact info.</p>
+
+    <h2>Our Address</h2>
+    <p>123 Urban Nest Avenue, Downtown, Antipolo Rizal</p>
+
+    <h2>Call Us</h2>
+    <p>(+639) 456-7890</p>
+
+    <h2>Email</h2>
+    <p>Urban_Nest@urgetaway.com</p>
+
+    <form action="#" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Urban Nest Apartment. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/UrbanNestApartment">Facebook</a> |
+      <a href="https://twitter.com/urbannest2022">Twitter</a> |
+      <a href="https://www.instagram.com/the_urbannest_athens/?hl=en">Instagram</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("availabilityForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const apartmentType = document.getElementById("apartment-type").value;
+      const checkIn = document.getElementById("check-in").value;
+      const checkOut = document.getElementById("check-out").value;
+      const messageDiv = document.getElementById("message");
+
+      if (!apartmentType || !checkIn || !checkOut) {
+        messageDiv.innerHTML = '<div class="error-message">Please fill in all fields.</div>';
+        return;
+      }
+
+      const isAvailable = Math.random() > 0.5;
+
+      if (isAvailable) {
+        messageDiv.innerHTML = `<div class="success-message">${apartmentType} is available from ${checkIn} to ${checkOut}!</div>`;
+      } else {
+        messageDiv.innerHTML = `<div class="error-message">Sorry, ${apartmentType} is not available for the selected dates.</div>`;
+      }
+    });
+  </script>
+</body>
+</html>
